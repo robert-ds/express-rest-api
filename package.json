@@ -1,0 +1,25 @@
+{
+  "name": "express-rest-api",
+  "version": "1.0.0",
+  "description": "This is an rest-api for the project ecommerce",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node --watch src/index.js",
+    "lint": "eslint"
+  },
+  "keywords": [
+    "api",
+    "rest",
+    "ecommerce",
+    "backend",
+    "nodejs"
+  ],
+  "author": "Robert Vásquez <vasquezrober09@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.41.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.8.8"
+  }
+}
