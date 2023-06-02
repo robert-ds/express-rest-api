@@ -1,3 +1,8 @@
 {
-  "*.{js,jsx,ts,tsx}": ["eslint --fix", "git add"]
+
+  "**/*.+(js)": [
+    "prettier --write",
+    "eslint no-console --fix src/*"
+  ]
+
 }
