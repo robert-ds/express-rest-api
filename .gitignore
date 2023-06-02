@@ -2,6 +2,7 @@
 # Edit at https://www.toptal.com/developers/gitignore?templates=linux,windows,macos,node,git
 
 .vscode
+node_modules
 
 ### Git ###
 # Created by git for backups. To disable backups in Git:
