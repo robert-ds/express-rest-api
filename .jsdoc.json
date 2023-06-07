@@ -1,0 +1,42 @@
+{
+  "tags": {
+    "allowUnknownTags": true,
+    "dictionaries": ["jsdoc"]
+  },
+  "plugins": [
+    "plugins/markdown",
+    "jsdoc-http-plugin"
+  ],
+  "source": {
+    "include": ["src/"],
+    "includePattern": ".js$",
+    "excludePattern": "(node_modules|docs)"
+  },
+  "templates": {
+    "cleverLinks": false,
+    "monospaceLinks": false,
+    "useLongnameInNav": false,
+    "showInheritedInNav": true
+  },
+  "opts": {
+    "encoding": "utf8",
+    "readme": "./README.md",
+    "tutorials": "./tutorials",
+    "template": "node_modules/clean-jsdoc-theme",
+    "theme_opts": {
+      "default_theme": "dark",
+      "meta": [
+      {
+        "name": "author",
+        "content": "Robert Vásquez"
+      },
+      {
+        "name": "description",
+        "content": "Best Clean and minimal JSDoc 3 Template/Theme"
+      }
+      ]
+    },
+    "recurse": "true",
+    "destination": "./docs"
+  }
+}
