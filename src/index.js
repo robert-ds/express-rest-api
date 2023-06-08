@@ -4,8 +4,10 @@ const routerApi = require('./routes/index');
 const app = express();
 const port = 3000;
 
-routerApi(app);
+/** Use middleware express.json */
+app.use(express.json());
 
+routerApi(app);
 
 app.listen(port, () => {
   console.log('listen in port ' + port);

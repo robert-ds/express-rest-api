@@ -12,3 +12,5 @@ router.get('/:categoryId/products/:productId', (req, res) => {
     productId
   });
 });
+
+module.exports = router;
