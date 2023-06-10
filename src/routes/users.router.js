@@ -1,9 +1,7 @@
 const express = require('express');
-/**
- * librery to create fake data
- */
-const {faker} = require('@faker-js/faker');
+const UsersService = require('../services/user.service');
 const router = express.Router();
+const service = new UsersService();
 
 // router.get('/', (req, res) => {
 //   const {limit, offset} = req.query;
@@ -18,20 +16,14 @@ const router = express.Router();
 // });
 
 router.get('/', (req, res) => {
-  const users = [];
-  const {size} = req.query;
-  const limit = size || 10;
-
-  for(let i = 0; i < limit; i++){
-    users.push({
-      name: faker.person.firstName(),
-      lastName: faker.person.lastName(),
-      country: faker.location.country(),
-      phone: faker.phone.number()
-    });
-  }
-
+  const users = service.find();
   res.json(users);
+});
+
+router.get('/:id', async (req, res) => {
+  const {id} = req.params;
+  const user = await service.findOne(id);
+  res.json(user);
 });
 
 module.exports = router;

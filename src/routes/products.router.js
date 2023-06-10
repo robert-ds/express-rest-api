@@ -1,9 +1,6 @@
 
 const express = require('express');
-/**
- * librery to create fake data
- */
-const ProductsService = require('../services/product.service');
+const ProductsService = require('../services/products.service');
 const router = express.Router();
 const service = new ProductsService();
 
